@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+  --color1: #0d0d0d;
+  --color2: #014034;
+  --color3: #02735e;
+  --color4: #038c73;
+  --color5: #36bfb1;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color1);
+  color: var(--white);
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+  height: 200vh;
+}
+
+::selection {
+  background-color: var(--color5);
+  color: var(--white);
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--color1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color5);
+  border-radius: 5rem;
+}
+a {
+  text-decoration: none !important;
+  color: var(--white) !important;
+}
