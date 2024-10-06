@@ -1,3 +1,4 @@
+'use client';
 import StarIcon from '@mui/icons-material/Star';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
@@ -10,7 +11,7 @@ import React, { useEffect, useState } from 'react';
 import { convertNumber } from '../../../functions/convNumber';
 import { removeItemToWatchlist } from '../../../functions/removeItemToWatchlist';
 import { saveItemToWatchlist } from '../../../functions/saveItemToWatchlist';
-import styles from './styles.module.css'; // Assuming you're using CSS modules
+import styles from './list.module.css';
 
 type Coin = {
   id: string;

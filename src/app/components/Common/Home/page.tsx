@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import List from '../../Dashboard/List/page';
 import Header from '../Header/header';
-import styles from './page.module.css';
+import styles from './home.module.css';
 
 export default function Home() {
   // Definir um exemplo de moeda (coin) com os atributos necessários
