@@ -1,7 +1,20 @@
-/* import './button.module.css';
+import './button.module.css';
 
-interface;
-export default function Button({ text }) {
-  return <div>{text}</div>;
+interface ButtonProps {
+  text: string;
+  onClick: () => void;
+  outlined?: boolean;
 }
- */
+
+function Button({ text, onClick, outlined = false }: ButtonProps) {
+  return (
+    <div
+      className={outlined ? 'btn-outlined' : 'btn'}
+      onClick={() => onClick()}
+    >
+      {text}
+    </div>
+  );
+}
+
+export default Button;
