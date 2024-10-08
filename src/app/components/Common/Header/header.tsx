@@ -1,32 +1,30 @@
 'use client';
+import Link from 'next/link';
 import TemporaryDrawer from './drawer';
 import styles from './header.module.css';
 export default function Header() {
   return (
     <div>
       <nav className={styles.navbar}>
-        <a href="/">
+        <Link href="/">
           <h1 className={styles.brand}>CryptoLegacy</h1>
-        </a>
+        </Link>
         <ul className={styles.navLinks}>
           <li>
-            <a href="/">
-              <p className={styles.link}>Home</p>
-            </a>
+            <Link href="/">
+              <p className={styles.link}>Comparar</p>
+            </Link>
           </li>
           <li>
-            <a href="/about">
-              <p className={styles.link}>About</p>
-            </a>
+            <Link href="/about">
+              <p className={styles.link}>Favoritos</p>
+            </Link>
           </li>
           <li>
-            <a href="/contact">
+            <Link href="/contact">
               <p className={styles.link}>Contact</p>
-            </a>
+            </Link>
           </li>
-          <form className={styles.searchForm}>
-            <input type="text" placeholder="Search..." />
-          </form>
         </ul>
         <div className={styles.drawer}>
           <TemporaryDrawer />

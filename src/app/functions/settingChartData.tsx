@@ -1,4 +1,4 @@
-import { gettingDate } from './getDate';
+import { gettingDate } from '../pages/getDate';
 
 interface PriceData {
   0: number;

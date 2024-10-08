@@ -1,6 +1,7 @@
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { IconButton } from '@mui/material';
 import Drawer from '@mui/material/Drawer';
+import Link from 'next/link';
 import * as React from 'react';
 import styles from './header.module.css';
 export default function TemporaryDrawer() {
@@ -17,20 +18,17 @@ export default function TemporaryDrawer() {
       </IconButton>
       <Drawer anchor={'right'} open={open} onClose={toggleDrawer(false)}>
         <div className={styles.openDrawer}>
-          <form className={styles.searchForm}>
-            <input type="text" placeholder="Search..." />
-          </form>
-          <a href="/">
+          <Link href="/">
             <p className={styles.link}>Home</p>
-          </a>
+          </Link>
 
-          <a href="/about">
+          <Link href="/about">
             <p className={styles.link}>About</p>
-          </a>
+          </Link>
 
-          <a href="/contact">
+          <Link href="/contact">
             <p className={styles.link}>Contact</p>
-          </a>
+          </Link>
         </div>
       </Drawer>
     </div>

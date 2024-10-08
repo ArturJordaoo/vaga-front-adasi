@@ -16,7 +16,7 @@ export const getPrices = async (
 ): Promise<[number, number][] | void> => {
   try {
     const response = await axios.get<CoinGeckoPriceData>(
-      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}&interval=daily`,
+      `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=brl&days=${days}&interval=daily`,
     );
 
     const data = response.data;
