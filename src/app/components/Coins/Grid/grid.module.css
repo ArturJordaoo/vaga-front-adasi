@@ -1,0 +1,194 @@
+.grid {
+  display: flex;
+  flex-direction: column; /* Alinhamento vertical */
+  gap: 1.5rem; /* Espaço entre os itens */
+  width: 250px; /* Largura fixa para a grade */
+  padding: 2rem; /* Padding para destaque */
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  border: 2px solid var(--darkgrey);
+  cursor: pointer; /* Cursor de pointer para interação */
+}
+
+.grid:hover {
+  border: 2px solid var(--green);
+  transition: all 0.3s;
+}
+
+.grid-red:hover {
+  border: 2px solid var(--red);
+  transition: all 0.3s;
+}
+
+.img-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem; /* Espaço entre a imagem e o texto */
+}
+
+.icon-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--green);
+  border-radius: 50%; /* Formato circular */
+  color: var(--green);
+  padding: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem !important; /* Importante para forçar o tamanho */
+}
+
+.watchlist-icon-red {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+.coin-image {
+  height: 3rem; /* Tamanho fixo da imagem */
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.info-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2rem; /* Espaço entre os itens de informação */
+}
+
+.coin-symbol {
+  text-transform: uppercase; /* Transformação para maiúsculas */
+  font-weight: 600;
+  margin: 0rem;
+}
+
+.coin-name {
+  margin: 0;
+  font-weight: 400; /* Peso da fonte */
+  color: var(--grey);
+  font-size: 0.8rem; /* Tamanho da fonte do nome do coin */
+}
+
+.chip-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem; /* Espaço entre os chips */
+}
+
+.price-chip {
+  border: 2px solid var(--green);
+  border-radius: 2rem; /* Formato circular para o chip de preço */
+  padding: 0.25rem 1rem; /* Padding do chip de preço */
+  font-weight: 600;
+  color: var(--green);
+}
+
+.price-chip:hover,
+.chip-icon:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.chip-icon {
+  border: 2px solid var(--green);
+  padding: 0.2rem; /* Padding para o ícone do chip */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Formato circular para o ícone */
+  color: var(--green);
+}
+
+.red {
+  border: 2px solid var(--red) !important; /* Importante para forçar a cor vermelha */
+  color: var(--red);
+}
+
+.red:hover {
+  background-color: var(
+    --red
+  ) !important; /* Cor de fundo vermelha ao passar o mouse */
+  color: var(--white) !important; /* Cor do texto ao passar o mouse */
+  transition: all 0.3s;
+}
+
+.current-price,
+.current-price-red {
+  color: var(--green); /* Cor verde para o preço atual */
+  font-weight: 600;
+  font-size: 1.1rem; /* Tamanho do preço */
+  margin: 0; /* Remover margem */
+}
+
+.current-price-red {
+  color: var(--red) !important; /* Cor vermelha para preço atual */
+}
+
+/* Responsividade */
+@media only screen and (max-width: 900px) {
+  .td-chip-icon {
+    display: none; /* Ocultar ícone do chip em telas menores */
+  }
+
+  .list-row td {
+    font-size: 0.7rem; /* Diminuir fonte para menor tela */
+  }
+
+  .td-totalVolume {
+    display: none; /* Ocultar volume total em telas menores */
+  }
+
+  .td-current-price {
+    text-align: center !important; /* Centraliza preço atual */
+  }
+
+  .list-row {
+    width: 100%; /* Largura total */
+    padding: 1.5rem 0rem; /* Padding para maior espaçamento */
+  }
+
+  .coin-image-td {
+    height: 2rem; /* Diminuir tamanho da imagem */
+    width: 2rem; /* Diminuir tamanho da imagem */
+  }
+
+  .td-info {
+    width: 6rem !important; /* Largura fixa para info */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .td-marketCap,
+  .td-chip-icon {
+    display: none !important; /* Ocultar market cap e chip icon */
+  }
+
+  .mobile {
+    display: block !important; /* Mostrar elemento móvel */
+    text-align: left !important; /* Alinhamento à esquerda */
+  }
+
+  .list-row td,
+  .td-p {
+    font-size: 0.6rem !important; /* Diminuir fonte ainda mais */
+  }
+
+  .td-info {
+    width: 4rem !important; /* Largura reduzida para info */
+  }
+
+  .coin-image-td {
+    height: 2rem !important; /* Diminuir tamanho da imagem */
+    width: 2rem !important; /* Diminuir tamanho da imagem */
+  }
+}

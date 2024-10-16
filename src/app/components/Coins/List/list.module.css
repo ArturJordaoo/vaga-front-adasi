@@ -1,0 +1,122 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Alinhamento vertical */
+  gap: 1.5rem; /* Espaço entre os itens */
+  width: 90%;
+}
+
+.listItem {
+  padding: 2rem;
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  border: 2px solid var(--darkgrey);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: row;
+}
+
+.listItem:hover {
+  border: 2px solid var(--green);
+}
+
+.listItemRed:hover {
+  border: 2px solid var(--red);
+}
+
+.img-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem; /* Espaço entre a imagem e o texto */
+}
+
+.coinImg {
+  max-width: 40px; /* Limita o tamanho da imagem do coin */
+  border-radius: 50%;
+}
+
+.tdInfo {
+  text-align: left; /* Texto alinhado à esquerda */
+}
+
+.coinSymbol {
+  font-weight: bold;
+  color: var(--white);
+}
+
+.coinName {
+  color: var(--grey);
+  font-size: 0.8rem; /* Tamanho da fonte do nome do coin */
+}
+
+.tdChange {
+  text-align: center; /* Centraliza o texto de mudança */
+  display: flex;
+  flex-direction: column; /* Coloca elementos em coluna */
+  align-items: center;
+}
+
+.priceChip {
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.coinPrice {
+  text-align: center; /* Alinhamento central para o preço */
+  font-weight: bold;
+  color: var(--white);
+}
+
+.currentPriceRed {
+  color: var(--red);
+}
+
+.coinMarketcap {
+  text-align: center; /* Centraliza o texto do market cap */
+  color: var(--grey);
+}
+
+.watchlistIcon {
+  color: var(--green);
+  cursor: pointer; /* Cursor de pointer para interação */
+  padding: 0.5rem;
+}
+
+.watchlistIconRed {
+  color: var(--red);
+}
+
+/* Responsividade */
+@media only screen and (max-width: 600px) {
+  .listItem {
+    padding: 1rem; /* Diminuindo o padding em telas pequenas */
+  }
+
+  .coinImg {
+    max-width: 30px; /* Tamanho reduzido da imagem */
+  }
+
+  .tdInfo {
+    text-align: center; /* Centraliza texto em telas pequenas */
+  }
+
+  .tdChange,
+  .coinPrice,
+  .coinMarketcap,
+  .watchlistIcon {
+    text-align: center;
+    margin-top: 0.5rem; /* Margem para separar os elementos */
+  }
+}

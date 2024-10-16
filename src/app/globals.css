@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
-  --color1: #0d0d0d;
-  --color2: #014034;
-  --color3: #02735e;
-  --color4: #038c73;
-  --color5: #36bfb1;
-  --white: #ffffff;
+  --color1: #0d0d0d; /* Dark background */
+  --color2: #014034; /* Dark teal */
+  --color3: #02735e; /* Teal */
+  --color4: #038c73; /* Light teal */
+  --color5: #36bfb1; /* Aqua */
+  --white: #ffffff; /* White */
+  --grey: #b0b0b0; /* Additional grey for text */
+  --darkgrey: #1a1a1a; /* Darker grey for card background */
+  --green: #36bfb1; /* Teal for accents */
+  --red: #ff4d4d; /* Red for negative indicators */
 }
 
 body {

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { NextResponse } from 'next/server';
 
 type PriceType = 'market_caps' | 'total_volumes' | 'prices';
 
@@ -8,7 +9,7 @@ interface CoinGeckoPriceData {
   total_volumes: [number, number][];
 }
 
-export const getPrices = async (
+const getPrices = async (
   id: string,
   days: number,
   priceType: PriceType,
@@ -37,3 +38,30 @@ export const getPrices = async (
     }
   }
 };
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const id = searchParams.get('id');
+  const days = searchParams.get('days');
+  const priceType = searchParams.get('priceType') as PriceType;
+
+  if (!id || !days || !priceType) {
+    return NextResponse.json(
+      { error: 'Missing required parameters' },
+      { status: 400 },
+    );
+  }
+
+  try {
+    const daysNumber = parseInt(days, 10);
+    const priceData = await getPrices(id, daysNumber, priceType);
+
+    return NextResponse.json(priceData, { status: 200 });
+  } catch (error) {
+    console.error('Error fetching price data:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch price data' },
+      { status: 500 },
+    );
+  }
+}

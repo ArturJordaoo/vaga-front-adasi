@@ -1,0 +1,29 @@
+.tabsContainer {
+  width: 100%;
+}
+
+.tabs {
+  background-color: var(--darkblue);
+  color: var(--white);
+}
+
+.tab {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.tab:hover {
+  color: var(--lightblue);
+}
+
+.tabContent {
+  padding: 2rem;
+}
+
+.tabPane {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
