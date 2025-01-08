@@ -14,7 +14,8 @@
   cursor: pointer;
   transition: all 0.3s;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .listItem:hover {
@@ -38,7 +39,8 @@
 }
 
 .tdInfo {
-  text-align: left; /* Texto alinhado à esquerda */
+  text-align: left;
+  width: 200px; /* Texto alinhado à esquerda */
 }
 
 .coinSymbol {
@@ -56,6 +58,7 @@
   display: flex;
   flex-direction: column; /* Coloca elementos em coluna */
   align-items: center;
+  width: 200px;
 }
 
 .priceChip {
@@ -77,6 +80,7 @@
   text-align: center; /* Alinhamento central para o preço */
   font-weight: bold;
   color: var(--white);
+  width: 200px;
 }
 
 .currentPriceRed {
@@ -86,6 +90,7 @@
 .coinMarketcap {
   text-align: center; /* Centraliza o texto do market cap */
   color: var(--grey);
+  width: 200px;
 }
 
 .watchlistIcon {

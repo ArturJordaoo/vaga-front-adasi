@@ -40,15 +40,13 @@ const CoinsList: React.FC<CoinData> = (coin) => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Tooltip title="Coin Image">
-          <div className={styles.tdImg}>
-            <img
-              src={coin.image}
-              alt={`${coin.name} logo`}
-              className={styles.coinImg}
-            />
-          </div>
-        </Tooltip>
+        <div className={styles.tdImg}>
+          <img
+            src={coin.image}
+            alt={`${coin.name} logo`}
+            className={styles.coinImg}
+          />
+        </div>
         <Tooltip title="Coin Info" placement="bottom-start">
           <div className={styles.tdInfo}>
             <p className={styles.coinSymbol}>{coin.symbol.toUpperCase()}</p>
@@ -86,14 +84,18 @@ const CoinsList: React.FC<CoinData> = (coin) => {
             R$ {coin.market_cap ? coin.market_cap.toLocaleString() : 'N/A'}
           </div>
         </Tooltip>
-        <div
-          className={`${styles.watchlistIcon} ${
-            coin.price_change_percentage_24h < 0 ? styles.watchlistIconRed : ''
-          }`}
-          onClick={handleWatchlistToggle}
-        >
-          {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
-        </div>
+        <Tooltip title="Add to Favorites" placement="bottom">
+          <div
+            className={`${styles.watchlistIcon} ${
+              coin.price_change_percentage_24h < 0
+                ? styles.watchlistIconRed
+                : ''
+            }`}
+            onClick={handleWatchlistToggle}
+          >
+            {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
+          </div>
+        </Tooltip>
       </motion.div>
     </Link>
   );
