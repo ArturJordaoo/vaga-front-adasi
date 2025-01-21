@@ -53,6 +53,7 @@ const CoinsList: React.FC<CoinData> = (coin) => {
             <p className={styles.coinName}>{coin.name}</p>
           </div>
         </Tooltip>
+        {/* 24h Change Section */}
         <Tooltip title="24h Change" placement="bottom">
           <div className={styles.tdChange}>
             <span
@@ -84,7 +85,10 @@ const CoinsList: React.FC<CoinData> = (coin) => {
             R$ {coin.market_cap ? coin.market_cap.toLocaleString() : 'N/A'}
           </div>
         </Tooltip>
-        <Tooltip title="Add to Favorites" placement="bottom">
+        {/* Watchlist Icon Section */}
+        <Tooltip
+          title={isCoinAdded ? 'Remove from Favorites' : 'Add to Favorites'}
+        >
           <div
             className={`${styles.watchlistIcon} ${
               coin.price_change_percentage_24h < 0

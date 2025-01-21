@@ -66,14 +66,22 @@
   border-radius: 2rem;
   font-weight: 600;
   color: var(--white);
+  border: 2px solid var(--green);
 }
-
-.green {
+.priceChip:hover {
   background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
 }
 
 .red {
+  border: 2px solid var(--red) !important;
+}
+
+.red:hover {
   background-color: var(--red);
+  color: var(--white);
+  transition: all 0.3s;
 }
 
 .coinPrice {
@@ -83,10 +91,6 @@
   width: 200px;
 }
 
-.currentPriceRed {
-  color: var(--red);
-}
-
 .coinMarketcap {
   text-align: center; /* Centraliza o texto do market cap */
   color: var(--grey);
@@ -94,13 +98,28 @@
 }
 
 .watchlistIcon {
-  color: var(--green);
-  cursor: pointer; /* Cursor de pointer para interação */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--green);
+  border-radius: 50%; /* Formato circular */
   padding: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem !important; /* Importante para forçar o tamanho */
+}
+.watchlistIcon:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
 }
 
 .watchlistIconRed {
-  color: var(--red);
+  border: 2px solid var(--red);
+}
+.watchlistIconRed:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transition: all 0.3s;
 }
 
 /* Responsividade */
