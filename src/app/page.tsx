@@ -6,6 +6,7 @@ import CoinsTabs from './components/Coins/Tabs/page';
 import Header from './components/Common/Header/header';
 import SearchBar from './components/Common/SearchBar/page';
 import { useCoins } from './hooks/useCoins'; // Import the custom hook
+import styles from './page.module.css';
 
 export default function Home() {
   const { coins, loading, error } = useCoins(); // Use the custom hook
@@ -26,7 +27,9 @@ export default function Home() {
 
   return (
     <div className="coin_app">
-      <Header />
+      <div className={styles.header}>
+        <Header />
+      </div>
       <SearchBar type="text" placeholder="Search" onChange={handleChange} />
       <CoinsTabs />
     </div>

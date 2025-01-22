@@ -88,7 +88,7 @@ const CoinsGrid: React.FC<CoinData> = (coin) => {
         </Tooltip>
         <div
           className={`${styles.watchlistIcon} ${
-            coin.price_change_percentage_24h < 0 ? styles.watchlistIconRed : ''
+            coin.price_change_percentage_24h < 0 ? styles.watchlistIcon : ''
           }`}
           onClick={handleWatchlistToggle}
         >
