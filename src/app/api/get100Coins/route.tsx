@@ -12,8 +12,7 @@ export async function GET() {
         params: {
           vs_currency: 'brl',
           order: 'market_cap_desc',
-          per_page: 100,
-          page: 1,
+          per_page: 250,
         },
         headers: {
           x_cg_api_key: apiKey,

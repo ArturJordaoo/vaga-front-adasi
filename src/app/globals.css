@@ -19,7 +19,7 @@ body {
   color: var(--white);
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Inter', sans-serif;
-  height: 200vh;
+  height: 100%;
 }
 
 ::selection {

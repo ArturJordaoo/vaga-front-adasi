@@ -4,6 +4,7 @@
   flex-direction: column; /* Alinhamento vertical */
   gap: 1.5rem; /* Espaço entre os itens */
   width: 90%;
+  height: 100%;
 }
 
 .listItem {

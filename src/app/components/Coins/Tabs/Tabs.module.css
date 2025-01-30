@@ -10,7 +10,7 @@
 .tab {
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--white);
+
   transition: color 0.3s;
 }
 

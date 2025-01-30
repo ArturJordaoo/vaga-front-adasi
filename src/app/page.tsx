@@ -30,7 +30,9 @@ export default function Home() {
       <div className={styles.header}>
         <Header />
       </div>
-      <SearchBar type="text" placeholder="Search" onChange={handleChange} />
+      <div className={styles.content}>
+        <SearchBar type="text" placeholder="Search" onChange={handleChange} />
+      </div>
       <CoinsTabs />
     </div>
   );
