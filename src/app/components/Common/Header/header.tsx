@@ -11,17 +11,17 @@ export default function Header() {
         </Link>
         <ul className={styles.navLinks}>
           <li>
-            <Link href="/">
+            <Link href="/Comparar">
               <p className={styles.link}>Comparar</p>
             </Link>
           </li>
           <li>
-            <Link href="/about">
+            <Link href="/Favoritos">
               <p className={styles.link}>Favoritos</p>
             </Link>
           </li>
           <li>
-            <Link href="/contact">
+            <Link href="/Contato">
               <p className={styles.link}>Contact</p>
             </Link>
           </li>
